@@ -1,0 +1,124 @@
+@use "../components/index" as components;
+
+.cont-header {
+  @extend %text-center;
+  padding-top: 25px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo--header {
+    width: 75px;
+  }
+
+  @media screen and (min-width: components.$value-tablet) {
+    .logo--header {
+      width: 90px;
+    }
+  }
+  // desktop
+  @media screen and (min-width: components.$value-desktop) {
+    padding-top: 40px;
+  }
+  @media screen and (min-width: components.$value-desktop-plus) {
+    .logo--header {
+      width: 110px;
+    }
+  }
+}
+
+.menu {
+  @extend %list-values;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    padding: 0 7px;
+  }
+  &__link {
+    @extend %font-paragraph;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: components.$value-tablet) {
+    &__item {
+      padding: 0 15px;
+    }
+  }
+  @media screen and (min-width: components.$value-desktop-plus) {
+    &__item {
+      padding: 0 25px;
+    }
+  }
+}
+
+.fylo-header {
+  margin: 65px 0 150px 0;
+  // border: solid 4px black;
+
+  &__title {
+    margin: 40px 0 30px 0;
+    @extend %font-paragraph;
+    font-size: components.Title(1.5rem);
+    line-height: 35px;
+    font-weight: 700;
+  }
+  &__text {
+    margin-bottom: 32px;
+  }
+  // desing tablet
+  @media screen and (min-width: components.$value-tablet) {
+    display: flex;
+    align-items: center;
+    margin: 90px 0 190px 0;
+
+    &__title {
+      margin-top: 0;
+    }
+    &__cont-img {
+      order: 2;
+      flex-basis: 45%;
+    }
+    &__info {
+      flex-basis: 55%;
+      margin-right: 20px;
+    }
+  }
+
+  // desing medium desktop
+  @media screen and (min-width: components.$value-medium-desktop) {
+    &__title {
+      @include components.FontTitle;
+      font-size: components.Title(1.5625rem);
+    }
+  }
+
+  // desktop
+  @media screen and (min-width: components.$value-desktop) {
+    margin: 60px 0 190px 0;
+
+    &__title {
+      font-size: components.Title(1.75rem);
+      line-height: 45px;
+    }
+    &__cont-img,
+    &__info {
+      flex-basis: 50%;
+    }
+    &__info {
+      margin-right: 35px;
+    }
+  }
+
+  // desktop plus
+  @media screen and (min-width: components.$value-desktop-plus) {
+    &__title {
+      font-size: 38px;
+    }
+    &__info {
+      margin-right: 0;
+    }
+  }
+}

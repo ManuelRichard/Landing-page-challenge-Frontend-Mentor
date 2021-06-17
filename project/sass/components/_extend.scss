@@ -1,0 +1,34 @@
+@use "funtions";
+@use "variables";
+// Fonts
+
+%font-paragraph {
+  font-size: 0.87rem;
+  font-weight: 400;
+  color: funtions.palette(very-dark-blue);
+
+  @media screen and (min-width: variables.$value-medium-desktop) {
+    font-size: 0.9375rem;
+  }
+
+  @media screen and (min-width: variables.$value-desktop) {
+    font-size: 1rem;
+  }
+}
+
+%text-center {
+  text-align: center;
+}
+
+%list-values {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+// media desktop
+@media screen and (min-width: variables.$value-tablet) {
+  %text-center {
+    text-align: left;
+  }
+}

@@ -1,0 +1,98 @@
+@use "../components/index" as components;
+$input-invalid: #f00;
+$input-valid: #20ee20;
+.form {
+  &__cont-input {
+    position: relative;
+  }
+  &__input,
+  &__submit {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+  }
+
+  &__input {
+    border: solid 1.5px components.palette(very-dark-blue);
+    outline: none;
+  }
+  &__input::placeholder {
+    color: components.palette(light-gray);
+  }
+  &__submit {
+    margin-top: 20px;
+    border: none;
+    background-color: components.palette(bright-blue);
+    color: components.palette(light-grayish-blue);
+    font-weight: 600;
+  }
+  // menssage verifiert email
+  &__email-verifier::before,
+  &__email-verifier::after {
+    position: absolute;
+    font-size: 0.75rem;
+    bottom: 0;
+    left: 0;
+    transform: translateY(80%);
+  }
+  &__input:focus {
+    &:invalid {
+      border: solid 1px $input-invalid;
+    }
+  }
+
+  &__input--header:focus,
+  &__input--bottom-page:focus {
+    &:valid + .form__email-verifier::before {
+      content: "Email correct";
+      color: $input-valid;
+    }
+  }
+  &__input--header:focus:invalid + .form__email-verifier::after {
+    content: "Please check your email";
+    color: $input-invalid;
+  }
+  &__input--bottom-page:focus:invalid + .form__email-verifier::after {
+    content: "Please check your email";
+    color: components.palette(light-grayish-blue);
+  }
+
+  &__bottom-page {
+    padding: 0 30px;
+  }
+
+  // medium desktop
+  @media screen and (min-width: components.$value-medium-desktop) {
+    &--header {
+      display: flex;
+      align-items: center;
+    }
+    &__cont-input--header {
+      flex-basis: 65%;
+      margin-right: 10px;
+    }
+    &__submit--header {
+      flex-basis: 35%;
+      margin-top: 0;
+    }
+  }
+
+  //desktop
+  @media screen and (min-width: components.$value-desktop) {
+    padding-right: 35px;
+
+    &__submit:hover {
+      filter: brightness(1.5);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: components.$value-tablet) {
+  .form--header {
+    max-width: 550px;
+  }
+  .form__submit--bottom-page {
+    max-width: 370px;
+  }
+}

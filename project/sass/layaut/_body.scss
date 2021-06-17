@@ -1,0 +1,44 @@
+@use "../components/index" as components;
+
+.main-body {
+  font-family: "open sans", sans-serif;
+  line-height: 22px;
+  position: relative;
+  @extend %font-paragraph;
+  min-width: 325px;
+}
+// no padding cont-main, to make the background
+.cont-main__cont-img,
+.argument-fylo,
+.presentation__cont-img,
+.cont-header {
+  margin: 0 var(--margin-global);
+}
+
+@media screen and (min-width: components.$value-tablet) {
+  .presentation__cont-img,
+  .argument-fylo {
+    margin: 0;
+  }
+  // cont of presentation__cont-img and argument-fylo
+  .presentation {
+    margin: 0 var(--margin-global);
+  }
+}
+
+// line breaks
+.break-desktop--title,
+.break-desktop {
+  display: none;
+}
+// media desktop
+@media screen and (min-width: components.$value-tablet) {
+  .break-desktop--title {
+    display: block;
+  }
+}
+@media screen and (min-width: components.$value-medium-desktop) {
+  .break-desktop {
+    display: block;
+  }
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+    <link rel="stylesheet" href="project/css/Normalize/normalize.css" />
+
+    <link rel="stylesheet" href="project/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6861aff6b8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="main-body">
+    <header role="heading" class="cont-header">
+      <nav class="cont-header__nav">
+        <a href="#"
+          ><img class="logo logo--header" src="images/logo.svg" alt="logo fylo"
+        /></a>
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Feactures</a>
+          </li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Sing in</a></li>
+        </ul>
+      </nav>
+      <!-- contenido header -->
+      <section class="fylo-header">
+        <div class="fylo-header__cont-img">
+          <img
+            role="img"
+            class="fylo-header__img"
+            src="images/illustration-1.svg"
+            alt="illustration-folder"
+          />
+        </div>
+        <div class="fylo-header__info">
+          <h1 class="fylo-header__title">
+            All your files in one secure
+            <br class="break-desktop break-desktop--title" />
+            location, accessible anywhere.
+          </h1>
+          <p class="fylo-header__text">
+            Fylo stores your most important files in one secure location. Access
+            <br class="break-desktop" />
+            them wherever you need, share and collaborate with friends, family,
+            <br class="break-desktop" />
+            and co-workers.
+          </p>
+
+          <form role="form" class="form form--header">
+            <div class="form__cont-input form__cont-input--header">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email..."
+                autocomplete="email"
+                id="email-header"
+                required
+                class="form__input form__input--header"
+              />
+              <label for="email-header" class="form__email-verifier"></label>
+            </div>
+            <input
+              class="form__submit form__submit--header"
+              type="submit"
+              name="submit-contac"
+              value="Get Started"
+            />
+          </form>
+        </div>
+      </section>
+    </header>
+    <main role="main" class="cont-main">
+      <!-- contenido principal -->
+      <section class="presentation">
+        <div class="presentation__cont-img">
+          <img
+            class="presentation__img"
+            src="images/illustration-2.svg"
+            alt="illustration of three people in Fylo"
+          />
+        </div>
+        <!-- parrafo principal -->
+        <div class="argument-fylo">
+          <h2 class="argument-fylo__title">
+            Stay productive, wherever you are
+          </h2>
+          <p class="argument-fylo__paragraph">
+            Never let location be an issue when accessing your files. Fylo has
+            you <br class="break-desktop" />
+            covered for all of your file storage needs.
+          </p>
+          <p class="argument-fylo__paragraph">
+            Securely share files and folders with friends, family and colleagues
+            for <br class="break-desktop" />
+            live collaboration. No email attachments required!
+          </p>
+
+          <div class="argument-fylo__cont-link">
+            <a class="argument-fylo__link" href="#"
+              >See how Fylo works
+              <img
+                class="emoji-arrow"
+                src="images/icon-arrow.svg"
+                alt="emoji arrow link"
+            /></a>
+          </div>
+        </div>
+        <article class="testimonial">
+          <blockquote class="testimonial__cite">
+            <img src="images/icon-quotes.svg" alt="icon quotes" />
+            <p class="testimonial__paragraph">
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+          </blockquote>
+          <div class="testimonial__profile">
+            <div class="testimonial__cont-img">
+              <img
+                class="testimonial__avatar"
+                src="images/avatar-testimonial.jpg"
+                alt="profile photo"
+              />
+            </div>
+            <h2 class="testimonial__name">
+              Kyle Burton <br />
+              <span class="testimonial__profession">
+                Founder & CEO. Hunddle
+              </span>
+            </h2>
+          </div>
+        </article>
+      </section>
+      <!-- registro -->
+      <div class="span">
+        <div class="span__content">
+          <h2 class="span__title">Get early access today</h2>
+          <p class="span__paragraph">
+            It only takes a minute to sign up and our free starter tier is
+            <br class="break-desktop" />
+            extremely generous. If you have any questions, our support team
+            <br class="break-desktop" />
+            would be happy to help you.
+          </p>
+        </div>
+        <form role="form" class="form form__bottom-page">
+          <div class="form__cont-input">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email..."
+              autocomplete="email"
+              id="email-footer"
+              required
+              class="form__input form__input--bottom-page"
+            />
+            <label for="email-footer" class="form__email-verifier"></label>
+          </div>
+          <input
+            class="form__submit form__submit--bottom-page"
+            type="submit"
+            name="submit-contac"
+            value="Get Started"
+          />
+        </form>
+      </div>
+    </main>
+    <footer class="cont-footer">
+      <a href="#">
+        <img class="logo logo-footer" src="images/logo.svg" alt="logo"
+      /></a>
+      <nav class="footer-nav">
+        <ul class="contac">
+          <li class="contac__item">
+            <a href="tel:+1-543-123-4567" class="contac__link">
+              <img
+                class="contac__icon"
+                src="images/icon-phone.svg"
+                alt="icon phone"
+              />
+              Phone: +1-543-123-4567</a
+            >
+          </li>
+          <li class="contac__item">
+            <a href="mailto:example@fylo.com" class="contac__link">
+              <img
+                class="contac__icon"
+                src="images/icon-email.svg"
+                alt="icon email"
+              />
+              example@fylo.com</a
+            >
+          </li>
+        </ul>
+        <!-- options fylo -->
+        <ul class="info-fylo__menu">
+          <li class="info-fylo__item">
+            <a href="#" class="info-fylo__link">About Us</a>
+          </li>
+          <li class="info-fylo__item">
+            <a href="#" class="info-fylo__link">Jobs</a>
+          </li>
+          <li class="info-fylo__item">
+            <a href="#" class="info-fylo__link">Press</a>
+          </li>
+          <li class="info-fylo__item">
+            <a href="#" class="info-fylo__link">Blog</a>
+          </li>
+        </ul>
+        <ul class="info-fylo__menu">
+          <li class="info-fylo__item">
+            <a href="#" class="info-fylo__link">Contac Us</a>
+          </li>
+          <li class="info-fylo__item">
+            <a href="#" class="info-fylo__link">Terms</a>
+          </li>
+          <li class="info-fylo__item">
+            <a href="#" class="info-fylo__link">Privacy</a>
+          </li>
+        </ul>
+        <!-- media fylo -->
+        <ul class="fylo-social">
+          <li class="fylo-social__item">
+            <a href="#" class="fylo-social__link"
+              ><i class="fab icon-media fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="fylo-social__item">
+            <a href="#" class="fylo-social__link"
+              ><i class="fab icon-media fa-twitter"></i
+            ></a>
+          </li>
+          <li class="fylo-social__item">
+            <a href="#" class="fylo-social__link"
+              ><i class="fab icon-media fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
