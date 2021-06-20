@@ -6,8 +6,8 @@
 
   // all links footer
   [class*="link"] {
-    color: components.palette(light-grayish-blue);
     text-decoration: none;
+    color: components.palette(light-grayish-blue);
 
     @media screen and (min-width: components.$value-desktop) {
       &:hover {
@@ -17,10 +17,10 @@
   }
 
   .logo-footer {
+    margin-bottom: 40px;
     width: 160px;
     height: 45px;
     filter: brightness(0) invert(1);
-    margin-bottom: 40px;
   }
 
   // desktop

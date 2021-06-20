@@ -1,11 +1,11 @@
 @use "../components/index" as components;
 
 .main-body {
+  @extend %font-paragraph;
+  position: relative;
+  min-width: 325px;
   font-family: "open sans", sans-serif;
   line-height: 22px;
-  position: relative;
-  @extend %font-paragraph;
-  min-width: 325px;
 }
 // no padding cont-main, to make the background
 .cont-main__cont-img,

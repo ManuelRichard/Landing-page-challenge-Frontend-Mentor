@@ -22,17 +22,17 @@ $input-valid: #20ee20;
   &__submit {
     margin-top: 20px;
     border: none;
-    background-color: components.palette(bright-blue);
-    color: components.palette(light-grayish-blue);
     font-weight: 600;
+    color: components.palette(light-grayish-blue);
+    background-color: components.palette(bright-blue);
   }
   // menssage verifiert email
   &__email-verifier::before,
   &__email-verifier::after {
     position: absolute;
-    font-size: 0.75rem;
-    bottom: 0;
     left: 0;
+    bottom: 0;
+    font-size: 0.75rem;
     transform: translateY(80%);
   }
   &__input:focus {
@@ -68,12 +68,12 @@ $input-valid: #20ee20;
       align-items: center;
     }
     &__cont-input--header {
-      flex-basis: 65%;
       margin-right: 10px;
+      flex-basis: 65%;
     }
     &__submit--header {
-      flex-basis: 35%;
       margin-top: 0;
+      flex-basis: 35%;
     }
   }
 

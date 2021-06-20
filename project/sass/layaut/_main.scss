@@ -1,21 +1,21 @@
 @use "../components/index" as components;
 .cont-main {
-  background-color: components.palette(light-grayish-blue);
   position: relative;
+  background-color: components.palette(light-grayish-blue);
 
   // background page
   &::before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 70px;
     top: 0;
     left: 0;
-    transform: translateY(-100%);
+    width: 100%;
+    height: 70px;
     background-image: url(../../images/bg-curve-mobile.svg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center 100%;
+    transform: translateY(-100%);
   }
   @media screen and (min-width: components.$value-medium-desktop) {
     &::before {
@@ -49,9 +49,9 @@
     @extend %text-center;
   }
   &__link {
+    border-bottom: solid 2px;
     text-decoration: none;
     color: components.palette(moderate-cyan);
-    border-bottom: solid 2px;
   }
 
   // medium desktop
@@ -70,19 +70,18 @@
       cursor: pointer;
     }
   }
-  // desktop plus
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: components.$value-desktop-plus) {
     &__title {
-      font-size: components.Title(1.875rem);
+      font-size: components.Title(2.2rem);
     }
   }
 }
 
 .span {
-  background-color: components.palette(desaturated-blue);
-  color: components.palette(light-grayish-blue);
-  padding: 70px var(--margin-global);
   @extend %text-center;
+  padding: 70px var(--margin-global);
+  color: components.palette(light-grayish-blue);
+  background-color: components.palette(desaturated-blue);
 
   &__title {
     @include components.FontTitle;
@@ -99,12 +98,12 @@
     align-items: center;
 
     &__content {
-      flex-basis: 55%;
       margin-right: 20px;
+      flex-basis: 55%;
     }
     .form__bottom-page {
-      flex-basis: 45%;
       padding: 0;
+      flex-basis: 45%;
     }
     .form__submit--bottom-page {
       width: 70%;
@@ -127,8 +126,12 @@
     }
   }
   // desktop plus
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: components.$value-desktop-plus) {
     padding: 90px var(--margin-global);
+
+    &__title {
+      font-size: 1.7rem;
+    }
   }
 }
 
@@ -141,8 +144,8 @@
     gap: 10px;
 
     &__cont-img {
-      grid-column: -1 / -2;
       max-width: 550px;
+      grid-column: -1 / -2;
     }
   }
   .presentation__cont-img,

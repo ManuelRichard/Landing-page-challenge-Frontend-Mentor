@@ -1,15 +1,19 @@
 @use "../components/index" as components;
 
 .testimonial {
-  background-color: #fff;
-  box-shadow: 0 0 10px -3px components.palette(light-gray);
-  text-align: left;
   margin: 40px calc(var(--margin-global) + 15px) 0
     calc(var(--margin-global) + 15px);
-  padding: 20px 30px;
+  padding: 30px;
+  box-shadow: 0 0 10px -3px components.palette(light-gray);
+  text-align: left;
+  background-color: #fff;
+
+  background-image: url(../../images/icon-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: 30px 20px;
 
   &__paragraph {
-    margin: 15px 0;
+    margin-bottom: 15px;
   }
   &__cite {
     margin: 0;
@@ -29,14 +33,14 @@
     border-radius: 50%;
   }
   &__name {
-    margin: 0;
     @include components.FontTitle;
-    line-height: 17px;
+    margin: 0;
     font-size: components.Title(1rem);
+    line-height: 17px;
   }
   &__profession {
-    font-weight: 400;
     font-size: 13px;
+    font-weight: 400;
   }
   // media desktop
   @media screen and (min-width: components.$value-medium-desktop) {

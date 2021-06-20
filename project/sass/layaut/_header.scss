@@ -59,8 +59,8 @@
   // border: solid 4px black;
 
   &__title {
-    margin: 40px 0 30px 0;
     @extend %font-paragraph;
+    margin: 40px 0 30px 0;
     font-size: components.Title(1.5rem);
     line-height: 35px;
     font-weight: 700;
