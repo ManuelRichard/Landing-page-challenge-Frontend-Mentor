@@ -1,4 +1,4 @@
-@use "../components/index" as components;
+@use "../abstracts/index" as a;
 
 .main-body {
   @extend %font-paragraph;
@@ -15,7 +15,7 @@
   margin: 0 var(--margin-global);
 }
 
-@media screen and (min-width: components.$value-tablet) {
+@media screen and (min-width: a.$value-tablet) {
   .presentation__cont-img,
   .argument-fylo {
     margin: 0;
@@ -32,12 +32,12 @@
   display: none;
 }
 // media desktop
-@media screen and (min-width: components.$value-tablet) {
+@media screen and (min-width: a.$value-tablet) {
   .break-desktop--title {
     display: block;
   }
 }
-@media screen and (min-width: components.$value-medium-desktop) {
+@media screen and (min-width: a.$value-medium-desktop) {
   .break-desktop {
     display: block;
   }

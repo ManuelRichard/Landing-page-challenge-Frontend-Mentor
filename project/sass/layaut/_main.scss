@@ -1,7 +1,7 @@
-@use "../components/index" as components;
+@use "../abstracts/index" as a;
 .cont-main {
   position: relative;
-  background-color: components.palette(light-grayish-blue);
+  background-color: a.palette(light-grayish-blue);
 
   // background page
   &::before {
@@ -17,7 +17,7 @@
     background-position: center 100%;
     transform: translateY(-100%);
   }
-  @media screen and (min-width: components.$value-medium-desktop) {
+  @media screen and (min-width: a.$value-medium-desktop) {
     &::before {
       height: 90px;
       background-image: url(../../images/bg-curve-desktop.svg);
@@ -26,21 +26,21 @@
 }
 .presentation {
   margin-bottom: 70px;
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     margin-bottom: 20px;
   }
 }
 // cont main
 .argument-fylo {
   &__title {
-    @include components.FontTitle;
+    @include a.FontTitle;
     @extend %text-center;
     margin: 80px 0 30px 0;
-    font-size: components.Title(0.875rem);
+    font-size: a.Title(0.875rem);
   }
   &__paragraph {
     margin-top: 0;
-    color: components.palette(desaturated-blue);
+    color: a.palette(desaturated-blue);
   }
   &__paragraph:nth-of-type(2) {
     margin-bottom: 40px;
@@ -51,28 +51,28 @@
   &__link {
     border-bottom: solid 2px;
     text-decoration: none;
-    color: components.palette(moderate-cyan);
+    color: a.palette(moderate-cyan);
   }
 
   // medium desktop
-  @media screen and (min-width: components.$value-medium-desktop) {
+  @media screen and (min-width: a.$value-medium-desktop) {
     &__title {
-      font-size: components.Title(1.25rem);
+      font-size: a.Title(1.25rem);
     }
   }
   // desktop
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     &__title {
-      font-size: components.Title(1.75rem);
+      font-size: a.Title(1.75rem);
     }
     &__link:hover {
       filter: brightness(1.5);
       cursor: pointer;
     }
   }
-  @media screen and (min-width: components.$value-desktop-plus) {
+  @media screen and (min-width: a.$value-desktop-plus) {
     &__title {
-      font-size: components.Title(2.2rem);
+      font-size: a.Title(2.2rem);
     }
   }
 }
@@ -80,20 +80,20 @@
 .span {
   @extend %text-center;
   padding: 70px var(--margin-global);
-  color: components.palette(light-grayish-blue);
-  background-color: components.palette(desaturated-blue);
+  color: a.palette(light-grayish-blue);
+  background-color: a.palette(desaturated-blue);
 
   &__title {
-    @include components.FontTitle;
+    @include a.FontTitle;
     margin: 0;
-    font-size: components.Title(1rem);
+    font-size: a.Title(1rem);
   }
   &__paragraph {
     margin: 20px 0;
   }
 
   // tablet
-  @media screen and (min-width: components.$value-tablet) {
+  @media screen and (min-width: a.$value-tablet) {
     display: flex;
     align-items: center;
 
@@ -111,14 +111,14 @@
   }
 
   // medium desktop
-  @media screen and (min-width: components.$value-medium-desktop) {
+  @media screen and (min-width: a.$value-medium-desktop) {
     &__title {
       font-size: 1.25rem;
     }
   }
 
   // desktop
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     padding: 80px var(--margin-global);
 
     &__title {
@@ -126,7 +126,7 @@
     }
   }
   // desktop plus
-  @media screen and (min-width: components.$value-desktop-plus) {
+  @media screen and (min-width: a.$value-desktop-plus) {
     padding: 90px var(--margin-global);
 
     &__title {
@@ -135,7 +135,7 @@
   }
 }
 
-@media screen and (min-width: components.$value-tablet) {
+@media screen and (min-width: a.$value-tablet) {
   // contenido principal
   .presentation {
     display: grid;
@@ -161,7 +161,7 @@
   }
 }
 
-@media screen and (min-width: components.$value-desktop) {
+@media screen and (min-width: a.$value-desktop) {
   .presentation {
     gap: 30px;
 

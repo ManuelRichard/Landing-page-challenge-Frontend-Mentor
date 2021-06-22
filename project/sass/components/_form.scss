@@ -1,4 +1,4 @@
-@use "../components/index" as components;
+@use "../abstracts/index" as a;
 $input-invalid: #f00;
 $input-valid: #20ee20;
 .form {
@@ -13,18 +13,18 @@ $input-valid: #20ee20;
   }
 
   &__input {
-    border: solid 1.5px components.palette(very-dark-blue);
+    border: solid 1.5px a.palette(very-dark-blue);
     outline: none;
   }
   &__input::placeholder {
-    color: components.palette(light-gray);
+    color: a.palette(light-gray);
   }
   &__submit {
     margin-top: 20px;
     border: none;
     font-weight: 600;
-    color: components.palette(light-grayish-blue);
-    background-color: components.palette(bright-blue);
+    color: a.palette(light-grayish-blue);
+    background-color: a.palette(bright-blue);
   }
   // menssage verifiert email
   &__email-verifier::before,
@@ -54,7 +54,7 @@ $input-valid: #20ee20;
   }
   &__input--bottom-page:focus:invalid + .form__email-verifier::after {
     content: "Please check your email";
-    color: components.palette(light-grayish-blue);
+    color: a.palette(light-grayish-blue);
   }
 
   &__bottom-page {
@@ -62,7 +62,7 @@ $input-valid: #20ee20;
   }
 
   // medium desktop
-  @media screen and (min-width: components.$value-medium-desktop) {
+  @media screen and (min-width: a.$value-medium-desktop) {
     &--header {
       display: flex;
       align-items: center;
@@ -78,7 +78,7 @@ $input-valid: #20ee20;
   }
 
   //desktop
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     padding-right: 35px;
 
     &__submit:hover {
@@ -88,7 +88,7 @@ $input-valid: #20ee20;
   }
 }
 
-@media screen and (min-width: components.$value-tablet) {
+@media screen and (min-width: a.$value-tablet) {
   .form--header {
     max-width: 550px;
   }

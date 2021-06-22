@@ -1,4 +1,4 @@
-@use "../components/index" as components;
+@use "../abstracts/index" as a;
 
 .cont-header {
   @extend %text-center;
@@ -13,16 +13,16 @@
     width: 75px;
   }
 
-  @media screen and (min-width: components.$value-tablet) {
+  @media screen and (min-width: a.$value-tablet) {
     .logo--header {
       width: 90px;
     }
   }
   // desktop
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     padding-top: 40px;
   }
-  @media screen and (min-width: components.$value-desktop-plus) {
+  @media screen and (min-width: a.$value-desktop-plus) {
     .logo--header {
       width: 110px;
     }
@@ -42,12 +42,12 @@
     text-decoration: none;
   }
 
-  @media screen and (min-width: components.$value-tablet) {
+  @media screen and (min-width: a.$value-tablet) {
     &__item {
       padding: 0 15px;
     }
   }
-  @media screen and (min-width: components.$value-desktop-plus) {
+  @media screen and (min-width: a.$value-desktop-plus) {
     &__item {
       padding: 0 25px;
     }
@@ -61,7 +61,7 @@
   &__title {
     @extend %font-paragraph;
     margin: 40px 0 30px 0;
-    font-size: components.Title(1.5rem);
+    font-size: a.Title(1.5rem);
     line-height: 35px;
     font-weight: 700;
   }
@@ -69,7 +69,7 @@
     margin-bottom: 32px;
   }
   // desing tablet
-  @media screen and (min-width: components.$value-tablet) {
+  @media screen and (min-width: a.$value-tablet) {
     display: flex;
     align-items: center;
     margin: 90px 0 190px 0;
@@ -88,19 +88,19 @@
   }
 
   // desing medium desktop
-  @media screen and (min-width: components.$value-medium-desktop) {
+  @media screen and (min-width: a.$value-medium-desktop) {
     &__title {
-      @include components.FontTitle;
-      font-size: components.Title(1.5625rem);
+      @include a.FontTitle;
+      font-size: a.Title(1.5625rem);
     }
   }
 
   // desktop
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     margin: 60px 0 190px 0;
 
     &__title {
-      font-size: components.Title(1.75rem);
+      font-size: a.Title(1.75rem);
       line-height: 45px;
     }
     &__cont-img,
@@ -113,7 +113,7 @@
   }
 
   // desktop plus
-  @media screen and (min-width: components.$value-desktop-plus) {
+  @media screen and (min-width: a.$value-desktop-plus) {
     &__title {
       font-size: 38px;
     }

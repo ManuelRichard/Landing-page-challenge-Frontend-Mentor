@@ -1,17 +1,17 @@
-@use "../components/index" as components;
+@use "../abstracts/index" as a;
 
 .cont-footer {
   padding: 45px var(--margin-global);
-  background-color: components.palette(very-dark-blue);
+  background-color: a.palette(very-dark-blue);
 
   // all links footer
   [class*="link"] {
     text-decoration: none;
-    color: components.palette(light-grayish-blue);
+    color: a.palette(light-grayish-blue);
 
-    @media screen and (min-width: components.$value-desktop) {
+    @media screen and (min-width: a.$value-desktop) {
       &:hover {
-        color: components.palette(desaturated-blue);
+        color: a.palette(desaturated-blue);
       }
     }
   }
@@ -24,12 +24,12 @@
   }
 
   // desktop
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     padding: 70px var(--margin-global);
   }
 
   // desktop plus
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     padding: 100px var(--margin-global);
   }
 }
@@ -51,7 +51,7 @@
 .info-fylo__item:nth-last-child(1) {
   padding-bottom: 40px;
 
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     padding-bottom: 0;
   }
 }
@@ -75,12 +75,12 @@
     border-radius: 50%;
   }
 }
-@media screen and (min-width: components.$value-desktop) {
+@media screen and (min-width: a.$value-desktop) {
   .footer-nav {
     display: flex;
     justify-content: space-between;
   }
   .icon-media:hover {
-    color: components.palette(bright-blue);
+    color: a.palette(bright-blue);
   }
 }

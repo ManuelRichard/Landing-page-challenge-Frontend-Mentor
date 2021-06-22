@@ -1,6 +1,8 @@
-@use "layaut/body";
+@use "base/global";
+
 @use "layaut/header";
 @use "layaut/footer";
 @use "layaut/main";
-@use "frecuent-blocks/form";
-@use "frecuent-blocks/testimonials";
+
+@use "components/form";
+@use "components/testimonials";

@@ -1,10 +1,10 @@
-@use "../components/index" as components;
+@use "../abstracts/index" as a;
 
 .testimonial {
   margin: 40px calc(var(--margin-global) + 15px) 0
     calc(var(--margin-global) + 15px);
   padding: 30px;
-  box-shadow: 0 0 10px -3px components.palette(light-gray);
+  box-shadow: 0 0 10px -3px a.palette(light-gray);
   text-align: left;
   background-color: #fff;
 
@@ -33,9 +33,9 @@
     border-radius: 50%;
   }
   &__name {
-    @include components.FontTitle;
+    @include a.FontTitle;
     margin: 0;
-    font-size: components.Title(1rem);
+    font-size: a.Title(1rem);
     line-height: 17px;
   }
   &__profession {
@@ -43,13 +43,13 @@
     font-weight: 400;
   }
   // media desktop
-  @media screen and (min-width: components.$value-medium-desktop) {
+  @media screen and (min-width: a.$value-medium-desktop) {
     margin: 40px calc(var(--margin-global) + 30px) 0
       calc(var(--margin-global) + 30px);
   }
 
   // desktop
-  @media screen and (min-width: components.$value-desktop) {
+  @media screen and (min-width: a.$value-desktop) {
     max-width: 400px;
     grid-column: 1 / 2;
     width: 60%;
