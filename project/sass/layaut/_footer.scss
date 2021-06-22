@@ -9,7 +9,7 @@
     text-decoration: none;
     color: a.palette(light-grayish-blue);
 
-    @media screen and (min-width: a.$value-desktop) {
+    @include a.breakpoint("desktop") {
       &:hover {
         color: a.palette(desaturated-blue);
       }
@@ -24,12 +24,12 @@
   }
 
   // desktop
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     padding: 70px var(--margin-global);
   }
 
   // desktop plus
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     padding: 100px var(--margin-global);
   }
 }
@@ -51,7 +51,7 @@
 .info-fylo__item:nth-last-child(1) {
   padding-bottom: 40px;
 
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     padding-bottom: 0;
   }
 }
@@ -75,7 +75,7 @@
     border-radius: 50%;
   }
 }
-@media screen and (min-width: a.$value-desktop) {
+@include a.breakpoint("desktop") {
   .footer-nav {
     display: flex;
     justify-content: space-between;

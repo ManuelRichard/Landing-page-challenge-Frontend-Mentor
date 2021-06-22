@@ -1,19 +1,21 @@
-@use "funtions";
-@use "variables";
+@use "funtions" as f;
+@use "variables" as var;
+@use 'mixins' as mx;
 // Fonts
 
 %font-paragraph {
   font-size: 0.87rem;
   font-weight: 400;
-  color: funtions.palette(very-dark-blue);
+  color: f.palette(very-dark-blue);
 
-  @media screen and (min-width: variables.$value-medium-desktop) {
+  @include mx.breakpoint("medium-desktop") {
     font-size: 0.9375rem;
   }
 
-  @media screen and (min-width: variables.$value-desktop) {
+  @include mx.breakpoint("desktop") {
     font-size: 1rem;
   }
+  @include mx.breakpoint("desktop");
 }
 
 %text-center {
@@ -26,8 +28,8 @@
   list-style: none;
 }
 
-// media desktop
-@media screen and (min-width: variables.$value-tablet) {
+// media tablet
+@include mx.breakpoint("tablet") {
   %text-center {
     text-align: left;
   }

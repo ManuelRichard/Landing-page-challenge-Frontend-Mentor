@@ -7,23 +7,28 @@ $colors: (
   light-gray: hsl(0, 0%, 75%),
 );
 
+///variable of all heading
 $font-title: 0;
 
-// media queries for desktop
-$value-tablet: 650px;
-$value-medium-desktop: 900px;
-$value-desktop: 1150px;
-$value-desktop-plus: 1350px;
-// side margin body
+$breackpoints: (
+  "tablet": 650px,
+  "medium-desktop": 900px,
+  "desktop": 1150px,
+  "desktop-plus": 1350px,
+);
+
 :root {
   --margin-global: 30px;
 }
-@media screen and (min-width: $value-desktop) {
+
+// no funtion because it is not worth it for only two values
+@media screen and (min-width: map-get($map: $breackpoints, $key: desktop )) {
   :root {
     --margin-global: 45px;
   }
 }
-@media screen and (min-width: $value-desktop-plus) {
+
+@media screen and (min-width: map-get($map: $breackpoints, $key: desktop-plus )) {
   :root {
     --margin-global: 80px;
   }

@@ -15,7 +15,7 @@
   margin: 0 var(--margin-global);
 }
 
-@media screen and (min-width: a.$value-tablet) {
+@include a.breakpoint("tablet") {
   .presentation__cont-img,
   .argument-fylo {
     margin: 0;
@@ -32,12 +32,12 @@
   display: none;
 }
 // media desktop
-@media screen and (min-width: a.$value-tablet) {
+@include a.breakpoint("tablet") {
   .break-desktop--title {
     display: block;
   }
 }
-@media screen and (min-width: a.$value-medium-desktop) {
+@include a.breakpoint("medium-desktop") {
   .break-desktop {
     display: block;
   }

@@ -27,7 +27,6 @@
     font-size: 1rem;
   }
 }
-
 .argument-fylo__title, .argument-fylo__cont-link, .span, .cont-header {
   text-align: center;
 }
@@ -91,6 +90,11 @@
 }
 .cont-header .logo--header {
   width: 75px;
+}
+@media screen and (min-width: 650px) {
+  .cont-header .logo--header {
+    width: 90px;
+  }
 }
 @media screen and (min-width: 650px) {
   .cont-header .logo--header {

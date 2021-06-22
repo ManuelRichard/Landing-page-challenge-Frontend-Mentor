@@ -1,9 +1,14 @@
-@use "variables";
+@use "variables" as var;
 
 @function palette($color) {
-  @return map-get($map: variables.$colors, $key: $color);
+  @return map-get($map: var.$colors, $key: $color);
 }
 //save writing: font-size: components.$font-title + 0.125;
 @function Title($suma) {
-  @return variables.$font-title + $suma;
+  @return var.$font-title + $suma;
+}
+
+// media queries
+@function breakpoint($point) {
+  @return map-get($map: var.$breackpoints, $key: $point);
 }

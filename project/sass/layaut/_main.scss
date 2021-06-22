@@ -17,7 +17,7 @@
     background-position: center 100%;
     transform: translateY(-100%);
   }
-  @media screen and (min-width: a.$value-medium-desktop) {
+  @include a.breakpoint("medium-desktop") {
     &::before {
       height: 90px;
       background-image: url(../../images/bg-curve-desktop.svg);
@@ -26,7 +26,7 @@
 }
 .presentation {
   margin-bottom: 70px;
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     margin-bottom: 20px;
   }
 }
@@ -55,13 +55,13 @@
   }
 
   // medium desktop
-  @media screen and (min-width: a.$value-medium-desktop) {
+  @include a.breakpoint("medium-desktop") {
     &__title {
       font-size: a.Title(1.25rem);
     }
   }
   // desktop
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     &__title {
       font-size: a.Title(1.75rem);
     }
@@ -70,7 +70,7 @@
       cursor: pointer;
     }
   }
-  @media screen and (min-width: a.$value-desktop-plus) {
+  @include a.breakpoint("desktop-plus") {
     &__title {
       font-size: a.Title(2.2rem);
     }
@@ -93,7 +93,7 @@
   }
 
   // tablet
-  @media screen and (min-width: a.$value-tablet) {
+  @include a.breakpoint("tablet") {
     display: flex;
     align-items: center;
 
@@ -111,14 +111,14 @@
   }
 
   // medium desktop
-  @media screen and (min-width: a.$value-medium-desktop) {
+  @include a.breakpoint("medium-desktop") {
     &__title {
       font-size: 1.25rem;
     }
   }
 
   // desktop
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     padding: 80px var(--margin-global);
 
     &__title {
@@ -126,7 +126,7 @@
     }
   }
   // desktop plus
-  @media screen and (min-width: a.$value-desktop-plus) {
+  @include a.breakpoint("desktop-plus") {
     padding: 90px var(--margin-global);
 
     &__title {
@@ -135,7 +135,7 @@
   }
 }
 
-@media screen and (min-width: a.$value-tablet) {
+@include a.breakpoint("tablet") {
   // contenido principal
   .presentation {
     display: grid;
@@ -161,7 +161,7 @@
   }
 }
 
-@media screen and (min-width: a.$value-desktop) {
+@include a.breakpoint("desktop") {
   .presentation {
     gap: 30px;
 

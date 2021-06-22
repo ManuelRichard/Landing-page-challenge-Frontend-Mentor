@@ -1,6 +1,8 @@
 @use "../abstracts/index" as a;
+
 $input-invalid: #f00;
 $input-valid: #20ee20;
+
 .form {
   &__cont-input {
     position: relative;
@@ -62,7 +64,7 @@ $input-valid: #20ee20;
   }
 
   // medium desktop
-  @media screen and (min-width: a.$value-medium-desktop) {
+  @include a.breakpoint("medium-desktop") {
     &--header {
       display: flex;
       align-items: center;
@@ -78,7 +80,7 @@ $input-valid: #20ee20;
   }
 
   //desktop
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     padding-right: 35px;
 
     &__submit:hover {
@@ -88,7 +90,7 @@ $input-valid: #20ee20;
   }
 }
 
-@media screen and (min-width: a.$value-tablet) {
+@include a.breakpoint("tablet") {
   .form--header {
     max-width: 550px;
   }

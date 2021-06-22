@@ -13,16 +13,21 @@
     width: 75px;
   }
 
-  @media screen and (min-width: a.$value-tablet) {
+  @include a.breakpoint("tablet") {
+    .logo--header {
+      width: 90px;
+    }
+  }
+  @include a.breakpoint("tablet") {
     .logo--header {
       width: 90px;
     }
   }
   // desktop
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     padding-top: 40px;
   }
-  @media screen and (min-width: a.$value-desktop-plus) {
+  @include a.breakpoint("desktop-plus") {
     .logo--header {
       width: 110px;
     }
@@ -42,12 +47,12 @@
     text-decoration: none;
   }
 
-  @media screen and (min-width: a.$value-tablet) {
+  @include a.breakpoint("tablet") {
     &__item {
       padding: 0 15px;
     }
   }
-  @media screen and (min-width: a.$value-desktop-plus) {
+  @include a.breakpoint("desktop-plus") {
     &__item {
       padding: 0 25px;
     }
@@ -69,7 +74,7 @@
     margin-bottom: 32px;
   }
   // desing tablet
-  @media screen and (min-width: a.$value-tablet) {
+  @include a.breakpoint("tablet") {
     display: flex;
     align-items: center;
     margin: 90px 0 190px 0;
@@ -88,7 +93,7 @@
   }
 
   // desing medium desktop
-  @media screen and (min-width: a.$value-medium-desktop) {
+  @include a.breakpoint("medium-desktop") {
     &__title {
       @include a.FontTitle;
       font-size: a.Title(1.5625rem);
@@ -96,7 +101,7 @@
   }
 
   // desktop
-  @media screen and (min-width: a.$value-desktop) {
+  @include a.breakpoint("desktop") {
     margin: 60px 0 190px 0;
 
     &__title {
@@ -113,7 +118,7 @@
   }
 
   // desktop plus
-  @media screen and (min-width: a.$value-desktop-plus) {
+  @include a.breakpoint("desktop-plus") {
     &__title {
       font-size: 38px;
     }
