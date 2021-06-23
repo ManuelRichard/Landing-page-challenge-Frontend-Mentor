@@ -6,29 +6,34 @@ $colors: (
   light-grayish-blue: hsl(240, 75%, 98%),
   light-gray: hsl(0, 0%, 75%),
 );
+$breackpoints: (
+  "mini": 650px,
+  "medium": 900px,
+  "large": 1150px,
+  "huge": 1350px,
+);
 
 ///variable of all heading
 $font-title: 0;
 
-$breackpoints: (
-  "tablet": 650px,
-  "medium-desktop": 900px,
-  "desktop": 1150px,
-  "desktop-plus": 1350px,
-);
-
+// values global
 :root {
   --margin-global: 30px;
+  --alig-text: center;
 }
 
-// no funtion because it is not worth it for only two values
-@media screen and (min-width: map-get($map: $breackpoints, $key: desktop )) {
+// no funtion because it is not worth it for only three values. if you think there should be a function for these three values, you can do it.
+@media screen and (min-width: map-get($map: $breackpoints, $key: "mini" )) {
+  :root {
+    --alig-text: left;
+  }
+}
+@media screen and (min-width: map-get($map: $breackpoints, $key: "large" )) {
   :root {
     --margin-global: 45px;
   }
 }
-
-@media screen and (min-width: map-get($map: $breackpoints, $key: desktop-plus )) {
+@media screen and (min-width: map-get($map: $breackpoints, $key: "huge" )) {
   :root {
     --margin-global: 80px;
   }

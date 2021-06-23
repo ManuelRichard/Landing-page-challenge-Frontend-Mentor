@@ -17,7 +17,7 @@
     background-position: center 100%;
     transform: translateY(-100%);
   }
-  @include a.breakpoint("medium-desktop") {
+  @include a.breakpoint("medium") {
     &::before {
       height: 90px;
       background-image: url(../../images/bg-curve-desktop.svg);
@@ -26,7 +26,7 @@
 }
 .presentation {
   margin-bottom: 70px;
-  @include a.breakpoint("desktop") {
+  @include a.breakpoint("large") {
     margin-bottom: 20px;
   }
 }
@@ -34,7 +34,7 @@
 .argument-fylo {
   &__title {
     @include a.FontTitle;
-    @extend %text-center;
+    text-align: var(--alig-text);
     margin: 80px 0 30px 0;
     font-size: a.Title(0.875rem);
   }
@@ -46,7 +46,7 @@
     margin-bottom: 40px;
   }
   &__cont-link {
-    @extend %text-center;
+    text-align: var(--alig-text);
   }
   &__link {
     border-bottom: solid 2px;
@@ -54,14 +54,12 @@
     color: a.palette(moderate-cyan);
   }
 
-  // medium desktop
-  @include a.breakpoint("medium-desktop") {
+  @include a.breakpoint("medium") {
     &__title {
       font-size: a.Title(1.25rem);
     }
   }
-  // desktop
-  @include a.breakpoint("desktop") {
+  @include a.breakpoint("large") {
     &__title {
       font-size: a.Title(1.75rem);
     }
@@ -70,7 +68,7 @@
       cursor: pointer;
     }
   }
-  @include a.breakpoint("desktop-plus") {
+  @include a.breakpoint("huge") {
     &__title {
       font-size: a.Title(2.2rem);
     }
@@ -78,7 +76,7 @@
 }
 
 .span {
-  @extend %text-center;
+  text-align: var(--alig-text);
   padding: 70px var(--margin-global);
   color: a.palette(light-grayish-blue);
   background-color: a.palette(desaturated-blue);
@@ -92,8 +90,7 @@
     margin: 20px 0;
   }
 
-  // tablet
-  @include a.breakpoint("tablet") {
+  @include a.breakpoint("mini") {
     display: flex;
     align-items: center;
 
@@ -110,23 +107,21 @@
     }
   }
 
-  // medium desktop
-  @include a.breakpoint("medium-desktop") {
+  @include a.breakpoint("medium") {
     &__title {
       font-size: 1.25rem;
     }
   }
 
-  // desktop
-  @include a.breakpoint("desktop") {
+  @include a.breakpoint("large") {
     padding: 80px var(--margin-global);
 
     &__title {
       font-size: 1.4375rem;
     }
   }
-  // desktop plus
-  @include a.breakpoint("desktop-plus") {
+
+  @include a.breakpoint("huge") {
     padding: 90px var(--margin-global);
 
     &__title {
@@ -135,8 +130,8 @@
   }
 }
 
-@include a.breakpoint("tablet") {
-  // contenido principal
+@include a.breakpoint("mini") {
+  //grid content img testimonial and argumento main
   .presentation {
     display: grid;
     grid-template-columns: 55% 45%;
@@ -161,7 +156,7 @@
   }
 }
 
-@include a.breakpoint("desktop") {
+@include a.breakpoint("large") {
   .presentation {
     gap: 30px;
 

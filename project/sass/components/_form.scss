@@ -28,6 +28,7 @@ $input-valid: #20ee20;
     color: a.palette(light-grayish-blue);
     background-color: a.palette(bright-blue);
   }
+
   // menssage verifiert email
   &__email-verifier::before,
   &__email-verifier::after {
@@ -37,12 +38,13 @@ $input-valid: #20ee20;
     font-size: 0.75rem;
     transform: translateY(80%);
   }
+
   &__input:focus {
     &:invalid {
       border: solid 1px $input-invalid;
     }
   }
-
+  //  valid form for header and footer
   &__input--header:focus,
   &__input--bottom-page:focus {
     &:valid + .form__email-verifier::before {
@@ -50,10 +52,12 @@ $input-valid: #20ee20;
       color: $input-valid;
     }
   }
+  // form invalid header
   &__input--header:focus:invalid + .form__email-verifier::after {
     content: "Please check your email";
     color: $input-invalid;
   }
+  // form invalid footer
   &__input--bottom-page:focus:invalid + .form__email-verifier::after {
     content: "Please check your email";
     color: a.palette(light-grayish-blue);
@@ -63,8 +67,7 @@ $input-valid: #20ee20;
     padding: 0 30px;
   }
 
-  // medium desktop
-  @include a.breakpoint("medium-desktop") {
+  @include a.breakpoint("medium") {
     &--header {
       display: flex;
       align-items: center;
@@ -80,7 +83,7 @@ $input-valid: #20ee20;
   }
 
   //desktop
-  @include a.breakpoint("desktop") {
+  @include a.breakpoint("large") {
     padding-right: 35px;
 
     &__submit:hover {
@@ -90,7 +93,7 @@ $input-valid: #20ee20;
   }
 }
 
-@include a.breakpoint("tablet") {
+@include a.breakpoint("mini") {
   .form--header {
     max-width: 550px;
   }

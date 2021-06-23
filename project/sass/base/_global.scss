@@ -1,43 +1,53 @@
 @use "../abstracts/index" as a;
 
 .main-body {
-  @extend %font-paragraph;
+  font-size: 0.87rem;
+  font-weight: 400;
+  color: a.palette(very-dark-blue);
   position: relative;
   min-width: 325px;
   font-family: "open sans", sans-serif;
   line-height: 22px;
+
+  @include a.breakpoint("medium") {
+    font-size: 0.9375rem;
+  }
+
+  @include a.breakpoint("large") {
+    font-size: 1rem;
+  }
 }
-// no padding cont-main, to make the background
+// global margin to individual elements and not to the body to let the svg background occupy the entire screen space
+.cont-header,
 .cont-main__cont-img,
-.argument-fylo,
 .presentation__cont-img,
-.cont-header {
+.argument-fylo {
   margin: 0 var(--margin-global);
 }
 
-@include a.breakpoint("tablet") {
+@include a.breakpoint("mini") {
   .presentation__cont-img,
   .argument-fylo {
     margin: 0;
   }
-  // cont of presentation__cont-img and argument-fylo
+  //removes the marge from the children and adds to the parent
   .presentation {
     margin: 0 var(--margin-global);
   }
 }
 
-// line breaks
+// line breaks that fire after of media "mini"(650px)for the title and the rest in media "medium"
 .break-desktop--title,
 .break-desktop {
   display: none;
 }
-// media desktop
-@include a.breakpoint("tablet") {
+//
+@include a.breakpoint("mini") {
   .break-desktop--title {
     display: block;
   }
 }
-@include a.breakpoint("medium-desktop") {
+@include a.breakpoint("medium") {
   .break-desktop {
     display: block;
   }

@@ -11,3 +11,9 @@
     @content;
   }
 }
+// reset listas
+@mixin list-values {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}

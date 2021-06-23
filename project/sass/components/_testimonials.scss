@@ -43,13 +43,13 @@
     font-weight: 400;
   }
   // media desktop
-  @include a.breakpoint("medium-desktop") {
+  @include a.breakpoint("medium") {
     margin: 40px calc(var(--margin-global) + 30px) 0
       calc(var(--margin-global) + 30px);
   }
 
   // desktop
-  @include a.breakpoint("desktop") {
+  @include a.breakpoint("large") {
     max-width: 400px;
     grid-column: 1 / 2;
     width: 60%;

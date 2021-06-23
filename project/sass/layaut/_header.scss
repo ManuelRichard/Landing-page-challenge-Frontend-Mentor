@@ -1,7 +1,7 @@
 @use "../abstracts/index" as a;
 
 .cont-header {
-  @extend %text-center;
+  text-align: var(--alig-text);
   padding-top: 25px;
 
   &__nav {
@@ -13,21 +13,21 @@
     width: 75px;
   }
 
-  @include a.breakpoint("tablet") {
+  @include a.breakpoint("mini") {
     .logo--header {
       width: 90px;
     }
   }
-  @include a.breakpoint("tablet") {
+  @include a.breakpoint("mini") {
     .logo--header {
       width: 90px;
     }
   }
   // desktop
-  @include a.breakpoint("desktop") {
+  @include a.breakpoint("large") {
     padding-top: 40px;
   }
-  @include a.breakpoint("desktop-plus") {
+  @include a.breakpoint("huge") {
     .logo--header {
       width: 110px;
     }
@@ -35,7 +35,7 @@
 }
 
 .menu {
-  @extend %list-values;
+  @include a.list-values;
   display: flex;
   justify-content: space-between;
 
@@ -43,16 +43,16 @@
     padding: 0 7px;
   }
   &__link {
-    @extend %font-paragraph;
+    color: inherit;
     text-decoration: none;
   }
 
-  @include a.breakpoint("tablet") {
+  @include a.breakpoint("mini") {
     &__item {
       padding: 0 15px;
     }
   }
-  @include a.breakpoint("desktop-plus") {
+  @include a.breakpoint("huge") {
     &__item {
       padding: 0 25px;
     }
@@ -61,10 +61,8 @@
 
 .fylo-header {
   margin: 65px 0 150px 0;
-  // border: solid 4px black;
 
   &__title {
-    @extend %font-paragraph;
     margin: 40px 0 30px 0;
     font-size: a.Title(1.5rem);
     line-height: 35px;
@@ -73,8 +71,8 @@
   &__text {
     margin-bottom: 32px;
   }
-  // desing tablet
-  @include a.breakpoint("tablet") {
+  // desing mini
+  @include a.breakpoint("mini") {
     display: flex;
     align-items: center;
     margin: 90px 0 190px 0;
@@ -93,7 +91,7 @@
   }
 
   // desing medium desktop
-  @include a.breakpoint("medium-desktop") {
+  @include a.breakpoint("medium") {
     &__title {
       @include a.FontTitle;
       font-size: a.Title(1.5625rem);
@@ -101,7 +99,7 @@
   }
 
   // desktop
-  @include a.breakpoint("desktop") {
+  @include a.breakpoint("large") {
     margin: 60px 0 190px 0;
 
     &__title {
@@ -118,7 +116,7 @@
   }
 
   // desktop plus
-  @include a.breakpoint("desktop-plus") {
+  @include a.breakpoint("huge") {
     &__title {
       font-size: 38px;
     }
